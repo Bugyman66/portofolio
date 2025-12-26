@@ -13,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white selection:bg-white/20">
       <Navbar />
       <Hero />
-      <div className="relative z-10 space-y-0 pb-20">
+      <div className="relative z-10 space-y-32 pb-32">
         <Projects />
         <Skills />
         <Hackathons />

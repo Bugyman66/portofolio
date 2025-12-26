@@ -2,46 +2,55 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronRight, Terminal } from "lucide-react";
 
 export function Hero() {
     return (
-        <section className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden bg-black pt-20">
-            {/* Background Noise/Gradient */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
-                <div className="absolute top-[-20%] left-[-10%] h-[500px] w-[500px] rounded-full bg-white/5 blur-[100px] pointer-events-none"></div>
-                <div className="absolute bottom-[-20%] right-[-10%] h-[500px] w-[500px] rounded-full bg-white/5 blur-[100px] pointer-events-none"></div>
+        <section className="relative flex min-h-[90vh] w-full items-center justify-center overflow-hidden bg-black/90 pt-20">
+            {/* Ambient Background Glows */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+                <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.04] mix-blend-overlay"></div>
+                {/* Primary subtle glow */}
+                <div className="absolute top-[-10%] left-[-10%] h-[600px] w-[600px] rounded-full bg-primary/10 blur-[120px]"></div>
+                {/* Secondary subtle glow */}
+                <div className="absolute bottom-[-10%] right-[-10%] h-[600px] w-[600px] rounded-full bg-secondary/10 blur-[120px]"></div>
+                {/* Center faint accent */}
+                <div className="absolute top-[30%] left-[50%] -translate-x-1/2 h-[400px] w-[800px] rounded-full bg-primary/5 blur-[100px]"></div>
             </div>
 
-            <div className="z-10 mx-auto flex max-w-4xl flex-col items-center px-6 text-center">
+            <div className="z-10 mx-auto flex max-w-5xl flex-col items-center px-6 text-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                    className="mb-6 inline-flex items-center rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-400 backdrop-blur-sm"
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    className="mb-8 inline-flex items-center rounded-full border border-white/5 bg-white/5 px-4 py-1.5 text-xs font-medium text-zinc-400 backdrop-blur-md"
                 >
-                    <span className="mr-2 h-1.5 w-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                    <span className="relative flex h-2 w-2 mr-3">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
                     Available for audits & protocol design
                 </motion.div>
 
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.1 }}
-                    className="mb-6 text-4xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl"
+                    transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+                    className="mb-8 text-5xl font-bold tracking-wide text-white sm:text-7xl md:text-8xl"
                 >
-                    Said Abba Ahmad
-                    <span className="block text-zinc-500 mt-2 text-2xl sm:text-4xl md:text-5xl font-semibold tracking-normal">
-                        Web3 Protocol Engineer
+                    <span className="bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent">
+                        Saeed Abba Ahmad
+                    </span>
+                    <span className="block mt-4 text-2xl sm:text-4xl md:text-5xl font-medium tracking-normal text-zinc-400">
+                        Fullstack Web3 Protocol Engineer
                     </span>
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                    className="mb-10 max-w-2xl text-lg text-zinc-400 sm:text-xl leading-relaxed"
+                    transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+                    className="mb-12 max-w-2xl text-lg text-zinc-400 sm:text-xl leading-relaxed font-light"
                 >
                     Architecting secure, decentralized systems and smart contract infrastructure.
                     Specializing in EVM & Move ecosystems, mechanism design, and ZK primitives.
@@ -50,14 +59,31 @@ export function Hero() {
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex flex-col gap-4 sm:flex-row"
+                    transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+                    className="flex flex-col gap-5 sm:flex-row items-center"
                 >
-                    <Button variant="primary" size="lg" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}>
-                        View Projects
+                    <Button
+                        variant="primary" // Assuming default is primary-like or we will style it
+                        size="lg"
+                        onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="group relative h-12 min-w-[160px] overflow-hidden rounded-full bg-white text-black hover:bg-zinc-200 transition-all duration-300"
+                    >
+                        <span className="relative z-10 font-semibold flex items-center">
+                            View Work
+                            <ChevronRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </span>
                     </Button>
-                    <Button variant="secondary" size="lg" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                        Book a Call <ArrowRight className="ml-2 h-4 w-4" />
+
+                    <Button
+                        variant="ghost"
+                        size="lg"
+                        onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                        className="group h-12 min-w-[160px] rounded-full text-zinc-300 hover:text-white hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300"
+                    >
+                        <span className="flex items-center font-medium">
+                            <Terminal className="mr-2 h-4 w-4" />
+                            Book a Call
+                        </span>
                     </Button>
                 </motion.div>
             </div>

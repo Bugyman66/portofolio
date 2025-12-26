@@ -40,7 +40,7 @@ export function Skills() {
                 </p>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {skills.map((group, index) => (
                     <motion.div
                         key={group.category}
@@ -48,13 +48,14 @@ export function Skills() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="rounded-lg border border-white/5 bg-white/5 p-6 backdrop-blur-sm"
+                        whileHover={{ y: -5 }}
+                        className="rounded-xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm transition-colors hover:border-primary/20 hover:bg-white/10"
                     >
                         <h3 className="mb-4 text-lg font-semibold text-white">{group.category}</h3>
                         <ul className="space-y-2">
                             {group.items.map((item) => (
                                 <li key={item} className="text-sm text-zinc-400 flex items-center">
-                                    <span className="mr-2 h-1 w-1 rounded-full bg-zinc-600"></span>
+                                    <span className="mr-2 h-1 w-1 rounded-full bg-primary/50"></span>
                                     {item}
                                 </li>
                             ))}

@@ -2,7 +2,7 @@
 
 import { Section } from "@/components/layout/section";
 import { motion } from "framer-motion";
-import { Trophy, Users, Mic } from "lucide-react";
+import { Trophy, Users, Mic, Building2, } from "lucide-react";
 
 const events = [
     {
@@ -78,6 +78,14 @@ const events = [
         date: "2025",
         icon: Users
     },
+    {
+        type: "Boothcamp",
+        title: "Aptos Assembly cohort 2",
+        role: "participant",
+        result: "finalist",
+        date: "2025",
+        icon: Building2
+    },
 ];
 
 export function Hackathons() {
@@ -93,12 +101,13 @@ export function Hackathons() {
                         key={index}
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
+                        whileHover={{ translateX: 5 }}
                         transition={{ duration: 0.4, delay: index * 0.1 }}
                         viewport={{ once: true }}
-                        className="flex flex-col gap-4 rounded-lg border border-white/5 bg-zinc-900/30 p-6 md:flex-row md:items-center md:justify-between"
+                        className="flex flex-col gap-4 rounded-xl border border-white/5 bg-zinc-900/30 p-6 md:flex-row md:items-center md:justify-between hover:border-white/10 transition-all"
                     >
                         <div className="flex items-center gap-4">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 text-zinc-300">
+                            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 text-primary">
                                 <event.icon size={20} />
                             </div>
                             <div>
