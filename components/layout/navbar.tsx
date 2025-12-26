@@ -21,7 +21,7 @@ export function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/60 backdrop-blur-xl">
             <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
                 <Link href="/" className="text-lg font-bold tracking-wider text-white hover:text-zinc-300 transition-colors">
-                    SAEED<span className="text-zinc-500">.WO</span>
+                    SAEED<span className="text-zinc-500">.VC</span>
                 </Link>
 
                 {/* Desktop Menu */}
@@ -35,6 +35,12 @@ export function Navbar() {
                     <button onClick={() => scrollToSection("research")} className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
                         Research
                     </button>
+                    <button onClick={() => scrollToSection("contact")} className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+                        Contact
+                    </button>
+                    <Button variant="primary" size="sm" onClick={() => scrollToSection("contact")} className="hidden sm:flex">
+                        Gallery
+                    </Button>
                 </div>
 
                 <div className="flex items-center gap-4">

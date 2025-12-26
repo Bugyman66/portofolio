@@ -14,10 +14,10 @@ export function Contact() {
                 </p>
 
                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                    <Button variant="primary" size="lg" className="w-full sm:w-auto" onClick={() => window.location.href = 'https://calendar.app.google/itH27hM98gikf2iD9'}>
                         <Calendar className="mr-2 h-4 w-4" /> Book a Discovery Call
                     </Button>
-                    <Button variant="outline" size="lg" className="w-full sm:w-auto" onClick={() => window.location.href = 'mailto:hello@example.com'}>
+                    <Button variant="outline" size="lg" className="w-full sm:w-auto" onClick={() => window.location.href = 'mailto:saidabbaahmad@gmail.com'}>
                         <Mail className="mr-2 h-4 w-4" /> Email Me
                     </Button>
                 </div>

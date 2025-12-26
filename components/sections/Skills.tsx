@@ -18,11 +18,15 @@ const skills = [
     },
     {
         category: "Backend & Systems",
-        items: ["Node.js", "TypeScript", "PostgreSQL", "MongoDB", "System Architecture", "API Design"]
+        items: ["Node.js", "Flask", "TypeScript", "PostgreSQL", "MongoDB", "System Architecture", "API Design"]
+    },
+    {
+        category: "Frontend & Design",
+        items: ["Next.js", "React", "Vue", "Tailwind CSS", "Shadcn UI", "Framer Motion"]
     },
     {
         category: "Tools & Technologies",
-        items: ["Git", "GitHub", "GitLab", "Docker",]
+        items: ["Git", "GitHub", "GitLab", "Docker", "AWS", "Firebase", "Supabase"]
     }
 ];
 

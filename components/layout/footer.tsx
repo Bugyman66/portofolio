@@ -18,13 +18,13 @@ export function Footer() {
                     <Link href="https://github.com/bugyman66" target="_blank" className="text-zinc-500 hover:text-white transition-colors">
                         <Github size={20} />
                     </Link>
-                    <Link href="https://twitter.com/virtualconneckt" target="_blank" className="text-zinc-500 hover:text-white transition-colors">
+                    <Link href="https://X.com/bugyman66" target="_blank" className="text-zinc-500 hover:text-white transition-colors">
                         <Twitter size={20} />
                     </Link>
-                    <Link href="https://linkedin.com/in/abdoulaahmad" target="_blank" className="text-zinc-500 hover:text-white transition-colors">
+                    <Link href="https://linkedin.com/in/said-abba-ahmad-209417227/" target="_blank" className="text-zinc-500 hover:text-white transition-colors">
                         <Linkedin size={20} />
                     </Link>
-                    <Link href="mailto:hello@example.com" className="text-zinc-500 hover:text-white transition-colors">
+                    <Link href="mailto:saidabbaahmad@gmail.com" className="text-zinc-500 hover:text-white transition-colors">
                         <Mail size={20} />
                     </Link>
                 </div>

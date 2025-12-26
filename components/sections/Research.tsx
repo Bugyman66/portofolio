@@ -6,20 +6,20 @@ import { cn } from "@/utils/cn";
 
 const research = [
     {
-        title: "Optimistic vs. ZK Rollups: A Finality Analysis",
-        abstract: "Investigating the trade-offs between dispute periods and proof generation times in the context of high-frequency DeFi markets.",
+        title: "A Trustless, On-Chain Skill Verification Model for AptosRoom",
+        abstract: "AptosRoom introduces Proof of Skill (PoSkill) — a verifiable, on-chain, non-transferable skill identity that evolves based on real task performance and peer evaluation. PoSkill enables trustless task adjudication, fair payments, and merit-based reputation without requiring token staking or centralized authorities.",
         status: "Published",
         tagColor: "bg-green-500/10 text-green-500 border-green-500/20"
     },
     {
-        title: "Account Abstraction for Non-EVM Chains",
-        abstract: "Drafting a standard for generalized paymasters and bundlers adapted for the Move ecosystem (Aptos/Sui).",
-        status: "Draft",
-        tagColor: "bg-yellow-500/10 text-yellow-500 border-yellow-500/20"
+        title: "BlockDAG Localnet for Parallel Transaction Execution & Developer Experimentation",
+        abstract: "A developer-focused localnet for experimenting with BlockDAG execution, parallel transactions, and DAG-based confirmation models.",
+        status: "Published",
+        tagColor: "bg-green-500/10 text-green-500 border-green-500/20"
     },
     {
-        title: "Reputation Primitives in Zero-Knowledge",
-        abstract: "Exploring how to prove reputation scores without revealing the underlying transaction history.",
+        title: "Probabalistic fast commit for Blockchain confirmation models",
+        abstract: "A low-latency blockchain confirmation model using cryptographic randomness and probabilistic ordering guarantees.",
         status: "Ongoing",
         tagColor: "bg-blue-500/10 text-blue-500 border-blue-500/20"
     }
